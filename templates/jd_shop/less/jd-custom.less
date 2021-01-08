@@ -1,0 +1,938 @@
+/**
+ * @author JoomDev https://www.joomdev.com/
+ * @copyright Copyright (C) 2008 - 2018 Joomdev.com. All rights reserved.
+ * @license http://www.gnu.org/licenses/gpl-2.0.html GPLv2 or later
+*/
+
+a{
+	color: @major_color;
+	&:hover, &:focus{
+		color: lighten(@major_color, 10%);
+	}
+}
+
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input{
+	&:focus{
+		border-color: @major_color;
+		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px fade(@major_color, 20%);
+	}
+}
+
+.qx-element-space{
+	margin: 0;
+}
+
+.alert{
+	background: #ffebcd;
+}
+
+.nav > li > a{
+	&:focus, &:hover{
+		background: none;
+	}
+}
+
+a.scrollup{
+	right: 20px;
+	bottom: 20px;
+	background: @major_color;
+	border: 1px solid @major_color;
+	&:hover{
+		background: lighten(@major_color, 10%);
+		border-color: lighten(@major_color, 10%);
+	}
+}
+
+.sp-module ul > li > a{
+	padding: 2px 0;
+	line-height: 32px;
+}
+
+/*----- TopBar Section -----*/
+#sp-top-bar{
+	background: #fff;
+	border-bottom: 1px solid #dfdfdf;
+	p, a{
+		font-size: 15px;
+	}
+	.fa{
+		padding-right: 5px;
+		color: @major_color;
+	}
+}
+
+/*----- Search Section -----*/
+#sp-search{
+	.search{
+		width: 100%;
+		position: relative;
+		text-align: center;
+		display: inline-block;
+		form{
+			float: right;
+		}
+		.element-invisible{
+			margin: 0;
+			padding: 0;
+			display: block;
+		}
+		input{
+			width: auto;
+			height: auto;
+			border: none;
+			float: left;
+			font-size: 18px;
+			box-shadow: none;
+			padding: 10px 30px;
+			line-height: normal;
+			border: 1px solid @major_color;
+			border-radius: 30px 0px 0px 30px;
+			&.button{
+				color: #fff;
+				padding: 10px 25px;
+				background: @major_color;
+				border-radius: 0px 30px 30px 0px;	
+			}
+		}
+		button{
+			width: auto;
+			height: auto;
+			border: none;
+			float: left;
+			color: #fff;
+			font-size: 18px;
+			box-shadow: none;
+			padding: 10px 25px;
+			line-height: normal;
+			background: @major_color;
+			border: 1px solid @major_color;
+			border-radius: 0px 30px 30px 0px;
+		}
+	}
+	.hikashop_filter_fieldset{
+		width: 100%;
+	}
+	.hikashop_filter_module{
+		width: 100%;
+		.hikashop_filter_button_outside, .hikashop_reset_button_outside{
+			display: none;
+		}
+		.hikashop_filter_main[class*="hikashop_filter_main_Search"]{
+			margin: 0;
+			min-height: auto !important;
+		}
+	}
+}
+
+/*----- Joomla Login Form -----*/
+#login{
+	padding:30px;
+	margin:0 auto;
+	.modal-dialog{
+		max-width: 400px;
+		width: 100%;
+	}
+	h2{
+		font-weight: normal;
+	}
+	.user_icon{
+		display: block;
+		font-size: 55px;
+	}
+	input{
+		&[type="text"],
+		&[type="password"]{
+			border: none;
+			border-bottom: 1px solid #ddd;
+			box-shadow: none;
+			&{
+				border-color: @major_color;
+				box-shadow: none;
+				border-radius: 0px;
+			}
+		}
+	}
+	.checkbox{
+		text-align: left;
+	}
+	.form-links{
+		text-align: center;
+		li{
+			margin-right: 8px;
+			display: inline-block;
+			a{
+				color: #333;
+				&:hover, &:focus{
+					color: @major_color;
+				}
+			}
+		}
+	}
+}
+
+.jd-modal-login{
+	position: relative;
+	.jd-my-account{
+		display: block;
+        min-width: 95px;
+		overflow: hidden;
+		padding: 5px 0;
+		&:hover, &:active{
+			ul.menu{
+				display: block;
+			}
+		}
+	}
+	ul.menu{
+		top: 30px;
+		padding: 0;
+		left: auto;
+		width: 190px;
+		right: -10px;
+		z-index: 9999;
+		display: none;
+		border: 1px solid #ddd;
+		background: #fff;
+		position: absolute;
+		li{
+			padding: 0 15px;
+			border-bottom: 1px solid #ddd;
+			&:last-child{
+				border-bottom: none;
+			}
+			a{
+				&:before{
+					display: none;
+				}
+			}
+			.fa{
+				padding-right: 5px;
+			}
+		}
+	}
+	.btn{
+		font-size: 15px;
+	}
+	button.close{
+		top: -22px;
+		opacity: 1;
+		padding: 0;
+		color: #fff;
+		width: 30px;
+		height: 31px;
+		right: -20px;
+		font-size: 22px;
+		background: #000;
+		line-height: 30px;
+		text-shadow: none;
+		position: absolute;
+		border-radius: 100%;
+	}
+	.form-group{
+		input.form-control{
+			height: auto;
+			padding: 15px 10px;
+		}
+	}
+	.modal-header .close{
+		margin: 0;
+	}
+	.form-links{
+		a, span{
+			margin: 0 !important;
+			padding: 0 !important;
+			font-size: 15px !important;
+			line-height: normal !important;
+		}
+	}
+}
+
+#sp-main-body{
+	padding: 0px;
+}
+
+#sp-hotline{
+	.sp-column {
+		left: 20px;
+		position: relative;
+	}
+}
+
+#sp-cart{
+	padding: 0;
+	text-align: right;
+	#hikashop_cart_module{
+		width: 100%;
+		display: inline-block;
+	}
+	.hikashop_small_cart_checkout_link{
+		text-align: left;
+	}
+}
+
+/*----- Module Class Suffix Css -----*/
+#sp-main-body{
+	.sp-module{
+		padding: 15px;
+		border: 1px solid #ccc;
+		h3.sp-module-title{
+			padding: 20px 0;
+			border-bottom: 1px solid #ccc;
+		}
+		&.no-border{
+			border: none;
+		}
+		&.no-padding{
+			padding: 0px;
+		}
+	}
+}
+
+.heading-center{
+	.sp-module-title{
+		text-align: center;
+	}
+}
+
+.no-bottom-space{
+	.sp-module-title{
+		margin-bottom: 0;
+	}
+}
+
+/*----- Title Style -----*/
+.sp-module {
+	h3.sp-module-title{
+		font-size: 25px;
+		text-transform: none;
+	}
+}
+
+/*----- Quix Suffix class ----- */
+.m-80{
+	position: relative;
+	top:-80px;
+	background: #fff;
+}
+
+/*----- Img -----*/
+.qx-img, .qx-image {
+	display: inline-block;
+}
+
+/*----- JD Form Horizontal -----*/
+.jd_contact_form{
+	.jd-form-horizontal{
+		fieldset{
+			.control-group{
+				display: inline-block;
+				width: 47.5%;
+				&:nth-child(5n+0){
+					width: 100%;
+				}
+				&:nth-child(6n+0){
+					width: 100%;
+				}
+				&:nth-child(odd){
+					margin-right: 40px;
+				}
+				&:nth-child(even){
+					margin-right: 0px;
+				}
+				input, textarea{
+					border-radius: 0px;
+					border-style: solid;
+					border-color: #e1e1e1;
+					border-width: 0px 0px 1px 0px;
+					margin-bottom: 20px;
+					width: 100%;
+					height: auto;
+					box-shadow: none;
+					&{
+						box-shadow: none;
+						border-bottom: 1px solid #ddd;
+					}
+					
+				}
+				label{
+					display: none;
+				}
+			}
+			.control-group{
+				text-align: center;
+				.qx-btn{
+					&.qx-btn-primary{
+						padding: 12px 60px;
+						background: @secondary_color;
+						&:hover{
+							background: fade(@secondary_color, 80%) ;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/*----- Button Style -----*/
+.qx-btn, .btn{
+	color: #fff;
+	font-size: 18px;
+	font-weight: bold;
+	border-width: 2px;
+	padding: 10px 40px;
+	border-radius: 30px;
+	background: @major_color;
+	&:hover, &:focus{
+		color: #fff;
+		border-color: transparent;
+		background: darken(@major_color, 10%);
+	}
+	&.qx-btn-default{
+		border-color: transparent;
+	}
+	&.qx-btn-info{
+		border: 2px solid @major_color;
+		&:hover, &:focus{
+			background: @major_color;
+			border-color: @major_color;
+		}
+	}
+	&.qx-btn-link{
+		border: 2px solid #fff;
+		&:hover{
+			text-decoration: none;
+		}
+	}
+}
+
+/*----- Login Popup -----*/
+#login-form{
+	ul.form-links{
+		li{
+			text-align: center;
+			a{
+				display: inline-block;
+				&:before{
+					display: none;
+				}
+			}
+		}
+	}
+	.or-section {
+		text-align: center;
+		margin-bottom: 30px;
+		border-bottom: 1px solid #ddd;
+		span {
+			top: 15px;
+			font-size: 22px;
+			padding: 0 10px;
+			background: #fff;
+			position: relative;
+		}
+	}
+}
+
+/*----- Acymailing Module -----*/
+.acymailing_module{
+	/* Horizontal Mode */
+	.acymailing_form{
+		width: 100%;
+		position: relative;
+		.container_form{
+			width: 95%;
+			float: none;
+			max-width: 750px;
+			position: relative;
+			text-align: center;
+			margin: 0 auto !important;
+		}
+		.acyfield_email.acy_requiredField{
+			width: 100%;
+			display: inline-block;
+			input{
+				color: #fff;
+				height: auto;
+				padding: 24px 30px;
+				border-radius: 40px;
+				background: @major_color;
+				border: 1px solid @major_color;
+			}
+		}
+		.acysubbuttons{
+			top: 7px;
+			right: 7px;
+			width: auto;
+			position: absolute;
+			display: inline-block;
+			vertical-align: middle;
+			input{
+				width: 100%;
+				border: none;
+				font-size: 18px;
+				padding: 15px 50px;
+				border-radius: 40px;
+				background: @secondary_color;
+			}
+		}
+	}
+	.acymailing_introtext{
+		color: @major_color;
+		padding-top: 10px  !important;
+		margin-bottom: 40px !important;
+	}
+}
+
+/*----- TopSecondary Section -----*/
+#sp-top-secondary{
+	padding: 20px 0px;
+	.sp-retina-logo{
+		display: none;
+	}
+	.hotline{
+		li{
+			display: inline-block;
+			border: none;
+			line-height: normal;
+			img{
+				margin: 0px 0px 9px;
+			}
+			h5{
+				margin: 0px;
+			}
+		}
+	}
+}
+
+/*----- Header Section -----*/
+#sp-header{
+	height: auto;
+	background: #eee;
+	box-shadow: none;
+	#sp-logo{
+		display: none;
+	}
+}
+
+/*----- Mobile Menu -----*/
+/* Default View */
+.offcanvas-menu{
+	.sp-module ul > li > a::before{
+		display: none;
+	}
+	.offcanvas-inner{
+		margin-top: 40px;
+		i.fa{
+			display: none;
+		}
+	}
+	.close-offcanvas{
+		transition: none;
+		&:hover{
+			color: @major_color;
+			border-color: @major_color;
+		}
+	}
+}
+.offcanvas{
+	.offcanvas-menu{
+		background: #333;
+	}
+}
+
+/* Slide Right View */
+.slide-top-menu{
+	.offcanvas-menu{
+		background: fade(@secondary_color, 80%) ;
+		._menu{
+			&:first-child{
+				padding: 0px;
+			}
+			ul.menu{
+				li{
+					a{
+						i.fa{
+							display: none;
+						}
+						&:before{
+							color: @major_color;
+						}
+					}
+					.offcanvas-menu-toggler{
+						i.fa{
+							color: @major_color;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/*----- Top Menu Right -----*/
+.top-menu-right{
+	width: 100%;
+	ul.menu{
+		text-align: right;
+		li{
+			border: none;
+			margin-right: 15px;
+			display: inline-block;
+			a:before{
+				content: none;
+			}
+		}
+	}
+}
+
+/*-----Mian Menu -----*/
+#sp-menu{
+	.sp-module{
+		margin: 0;
+	}
+	.sp-megamenu-wrapper{
+		ul.sp-megamenu-parent{
+			li{
+				> a, >span{
+					color: #323232;
+					font-size: 18px;
+					line-height: 50px;
+					text-transform: capitalize;
+					i.fa{
+						top: -3px;
+						font-size: 9px;
+						position: relative;
+					}
+				}
+				&.active, &:hover{
+					> a, > span{
+						color: @major_color;
+					}
+				}
+			}
+			.sp-dropdown{
+				.sp-dropdown-inner{
+					padding: 0;
+				}
+				/* DropDown Menu */
+				ul.sp-dropdown-items{
+					.sp-menu-item{
+						> a{
+							color: #787878;
+							padding: 10px 30px;
+							line-height: normal;
+							transition: all 200ms ease-in;
+							border-left: 5px solid transparent;
+							&:hover, &:focus{
+								color: #fff;
+								background: #191919;
+								border-color: @major_color;
+							}
+						}
+						&.active{
+							> a{
+								color: #fff;
+								background: #191919;
+								border-color: @major_color;
+							}
+						}
+					}
+				}
+				/* Mega Menu */
+				&.sp-dropdown-mega{
+					.sp-dropdown-inner{
+						padding: 20px;
+						> .row{
+							> div[class*="col-"]:not(:last-child){
+								position: relative;
+								border-right: 1px solid #e0e0e0;
+							}
+						}
+					}
+					.sp-group-title{
+						color: #171717;
+						padding: 5px 20px 10px;
+						line-height: normal;
+						&:hover, &:focus{
+							color: #171717;
+							background: none;
+						}
+					}
+					ul.sp-dropdown-items{
+						.sp-menu-item{
+							> a{
+								border: none;
+								color: #787878;
+								padding: 5px 20px;
+								line-height: normal;
+								&:hover, &:focus{
+									background: none;
+									color: @major_color;
+								}
+							}
+							&.active{
+								> a{
+									background: none;
+									color: @major_color;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+#offcanvas-toggler{
+	line-height: 50px;
+	> i{
+		z-index: 9999;
+		position: relative;
+		line-height: normal;
+	}
+}
+/*----- Title Section -----*/
+#sp-title{
+	.sp-page-title{
+		padding: 100px 0px;
+		h2{
+			font-size: 30px;
+		}
+		.breadcrumb{
+			float: right;
+			li{
+				+ li{
+					&:after{
+						top: -2px;
+						margin: 0 10px;
+						font-size: 8px;
+						content: "\f111";
+						position: relative;
+						color: @major_color;
+						font-family: FontAwesome;
+					}
+					&:before{
+						display: none;
+					}
+					&:last-child:after{
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+/*----- Bottom Section -----*/
+#sp-bottom{
+	.sp-module{
+		.sp-module-title{
+			font-size: 25px;
+			font-weight: 600;
+		}
+		.acymailing_module{
+			width: 60%;
+			margin: 0 auto !important;
+		}
+	}
+}
+
+/*----- Footer Section -----*/
+footer#sp-footer{
+	padding: 0px;
+	text-align: left;
+	overflow: hidden;
+	position: relative;
+	background: @secondary_color;
+	.container{
+		.sp-column  {
+			padding: 50px 0;
+		}
+	}
+	p, a{
+		color: #c5c5c5;
+	}
+	h3{
+		&.sp-module-title{
+			margin-bottom: 25px;
+			font-size: 25px;
+		}
+	}
+	ul{
+		&.menu{
+			li{
+				display: flex;
+				line-height: 30px;
+				width: auto;
+				border: none;
+				a{
+					&:before{
+						content: none;
+					}
+					&:hover{
+						color: @major_color;
+					}
+				}
+			}
+		}
+		&.social-icon{
+			li{
+				display: inline-block;
+				list-style: none;
+				border: none;
+				a{
+					font-size: 20px;
+					padding: 10px 0 10px 10px;
+					&:before{
+						content: none;
+					}
+				}
+			}
+		}
+		&.payment-icon{
+			li{
+				display: inline-block;
+				list-style: none;
+				border: none;
+				a{
+					padding: 10px 0 10px 10px;
+					&:before{
+						content: none;
+					}
+				}
+			}
+		}
+	}
+	#sp-footer-d{
+		.sp-module {
+			h3{
+				text-align: right;
+			}
+		}
+	}
+	div[id*="sp-footer-"]{
+		&[class*="col-md-"]{
+			&:nth-child(-n+2){
+				&:after{
+					background: #4c4c4c;
+					content: "";
+					display: block;
+					height: 100vh;
+					width: 2px;
+					position: absolute;
+					top: 0;
+					right: 15px
+				}
+			}
+			.vertical-heading{
+				position: relative;
+				.sp-module-title:after{
+					color: rgba(153, 153, 153, 0.2784313725490196);
+					content: attr(title);
+					display: block;
+					font-size: 35px;
+					font-weight: 600;
+					letter-spacing: 5px;
+					left: 100%;
+					top: 0;
+					padding-top: 10px;
+					position: absolute;
+					-webkit-transform: rotate(90deg);
+					-moz-transform: rotate(90deg);
+					-ms-transform: rotate(90deg);
+					-o-transform: rotate(90deg);
+					transform-origin: left top 0;
+					filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+				}
+			}
+		}
+	}
+}
+
+/*----- Copyright Section -----*/
+#sp-copyright{
+	font-size: 14px;
+	font-weight: 500;
+	background: @secondary_color;
+	border-top: 2px solid #4c4c4c;
+	.sp-column{
+		color: #fff;
+		padding: 20px 0;
+		line-height: normal;
+		p{
+			margin: 0px;
+			padding: 0px;
+		}
+	}
+}
+
+/*----- Search Form -----*/
+#searchForm{
+	.btn-toolbar{
+		#search-searchword{
+			height: auto;
+			font-size: 18px;
+			border-radius: 40px;
+			line-height: normal;
+			padding: 10px 40px;
+		}
+	}
+}
+
+/*----- Responsive CSS -----*/
+@media screen and (max-width:1199px){
+	body{
+		.jd-form-horizontal{
+			fieldset{
+				.control-group{
+					width: 100%;
+					&:nth-child(odd){
+						margin-right: 0px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width:981px){
+	#sp-bottom{
+		.sp-module{
+			.acymailing_module{
+				width: 100%;
+			}
+		}
+	}
+	#sp-header #sp-logo{
+		display: block;
+	}
+	footer#sp-footer{
+		.container .sp-column{
+			padding: 20px 0;
+		}
+		div[id*="sp-footer-"][class*="col-md-"]:nth-child(-n+2)::after{
+			display: none;
+		}
+	}
+}
+
+@media screen and (max-width:767px){
+	#sp-logo{
+		img{
+			margin: 0 auto;
+		}
+	}
+	#sp-search{
+		margin: 20px 0;
+	}
+	#sp-cart #hikashop_cart_module{
+		text-align: center;
+		.hikashop_cart{
+			min-width: 240px;
+			display: inline-block;
+		}
+	}
+	.acymailing_module .acymailing_form .acysubbuttons{
+		position: relative;
+	}
+}
